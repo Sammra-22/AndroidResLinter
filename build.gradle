@@ -18,6 +18,12 @@ allprojects {
     }
 }
 
+apply plugin: 'com.tanitech.reslinter'
+
+androidResLinter {
+    configFilePath = rootProject.file('config/resources-linter.xml')
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
